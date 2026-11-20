@@ -326,6 +326,14 @@
     margin-bottom: 2rem;
   }
   .about-bio strong { color: var(--text); font-weight: 500; }
+  .about-bio a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201,169,110,0.4);
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .about-bio a:hover { border-color: var(--accent); }
+  .about-bio a:hover strong { color: var(--accent); }
   .about-right {}
   .stat-grid {
     display: grid;
@@ -378,6 +386,15 @@
     border-color: rgba(201,169,110,0.3);
     color: var(--accent);
     background: var(--accent-dim);
+  }
+  .skill-group { margin-bottom: 1.4rem; }
+  .skill-group-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 0.5rem;
   }
 
   /* EXPERIENCE */
@@ -524,6 +541,8 @@
     grid-column: span 2;
     border-right: 1px solid var(--border);
   }
+  .project-card.wide { grid-column: 1 / -1; }
+  .projects-grid.two-col { grid-template-columns: repeat(2, 1fr); }
   .project-num {
     font-family: var(--font-mono);
     font-size: 0.62rem;
@@ -592,6 +611,9 @@
     padding: 0.3rem 0.7rem;
     margin-bottom: 1rem;
   }
+
+  /* LEADERSHIP */
+  #leadership { border-top: 1px solid var(--border); }
 
   /* CONTACT */
   #contact {
@@ -718,10 +740,12 @@
     nav { padding: 1.25rem 2rem; }
     #hero { padding: 0 2rem 5rem; }
     section { padding: 5rem 2rem; }
-    #about { grid-template-columns: 1fr; gap: 3rem; }
+    #about { grid-template-columns: minmax(0, 1fr); gap: 3rem; }
+    .stat-num { font-size: 1.7rem; }
     .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
     .projects-grid { grid-template-columns: 1fr; }
     .project-card.featured { grid-column: span 1; }
+    .projects-grid.two-col { grid-template-columns: 1fr; }
     footer { padding: 1.5rem 2rem; flex-direction: column; gap: 1rem; text-align: center; }
     #contact { padding: 6rem 2rem; }
   }
@@ -753,7 +777,7 @@
   </div>
   <h1 class="hero-name">Thea<br/><em>Ishida.</em></h1>
   <p class="hero-desc">
-    CS student at Western University. Varsity athlete. Builder of high-performance systems — from ML infrastructure at Autodesk to real-time, low-latency financial engines. Drawn to complexity where performance, scale, and speed collide.
+    I'm a Computer Science student and varsity athlete at Western University, passionate about backend systems and making things fast, from low-latency trading systems to AI infrastructure running in production. Graduating January 2028 and available for Summer 2027 internships.
   </p>
   <div class="hero-cta">
     <a href="#projects" class="btn-primary">View My Work →</a>
@@ -768,34 +792,34 @@
 <!-- TICKER -->
 <div class="ticker-strip" aria-hidden="true">
   <div class="ticker-inner">
+    <span class="ticker-item"><span class="dot"></span>Low-Latency Systems</span>
+    <span class="ticker-item"><span class="dot"></span>Trading Infrastructure</span>
     <span class="ticker-item"><span class="dot"></span>Python</span>
-    <span class="ticker-item"><span class="dot"></span>Machine Learning</span>
-    <span class="ticker-item"><span class="dot"></span>TypeScript</span>
-    <span class="ticker-item"><span class="dot"></span>Kubernetes</span>
-    <span class="ticker-item"><span class="dot"></span>Docker</span>
-    <span class="ticker-item"><span class="dot"></span>AWS Lambda</span>
-    <span class="ticker-item"><span class="dot"></span>React</span>
-    <span class="ticker-item"><span class="dot"></span>Spring Boot</span>
-    <span class="ticker-item"><span class="dot"></span>RAG Pipelines</span>
-    <span class="ticker-item"><span class="dot"></span>Financial Systems</span>
-    <span class="ticker-item"><span class="dot"></span>Fintech</span>
     <span class="ticker-item"><span class="dot"></span>Java</span>
+    <span class="ticker-item"><span class="dot"></span>C++</span>
     <span class="ticker-item"><span class="dot"></span>WebSockets</span>
-    <span class="ticker-item"><span class="dot"></span>C#/.NET</span>
+    <span class="ticker-item"><span class="dot"></span>Payment Rails</span>
+    <span class="ticker-item"><span class="dot"></span>FastAPI</span>
+    <span class="ticker-item"><span class="dot"></span>Spring Boot</span>
+    <span class="ticker-item"><span class="dot"></span>AWS</span>
+    <span class="ticker-item"><span class="dot"></span>Docker</span>
+    <span class="ticker-item"><span class="dot"></span>Kubernetes</span>
+    <span class="ticker-item"><span class="dot"></span>RAG</span>
+    <span class="ticker-item"><span class="dot"></span>MCP</span>
+    <span class="ticker-item"><span class="dot"></span>Low-Latency Systems</span>
+    <span class="ticker-item"><span class="dot"></span>Trading Infrastructure</span>
     <span class="ticker-item"><span class="dot"></span>Python</span>
-    <span class="ticker-item"><span class="dot"></span>Machine Learning</span>
-    <span class="ticker-item"><span class="dot"></span>TypeScript</span>
-    <span class="ticker-item"><span class="dot"></span>Kubernetes</span>
-    <span class="ticker-item"><span class="dot"></span>Docker</span>
-    <span class="ticker-item"><span class="dot"></span>AWS Lambda</span>
-    <span class="ticker-item"><span class="dot"></span>React</span>
-    <span class="ticker-item"><span class="dot"></span>Spring Boot</span>
-    <span class="ticker-item"><span class="dot"></span>RAG Pipelines</span>
-    <span class="ticker-item"><span class="dot"></span>Financial Systems</span>
-    <span class="ticker-item"><span class="dot"></span>Fintech</span>
     <span class="ticker-item"><span class="dot"></span>Java</span>
+    <span class="ticker-item"><span class="dot"></span>C++</span>
     <span class="ticker-item"><span class="dot"></span>WebSockets</span>
-    <span class="ticker-item"><span class="dot"></span>C#/.NET</span>
+    <span class="ticker-item"><span class="dot"></span>Payment Rails</span>
+    <span class="ticker-item"><span class="dot"></span>FastAPI</span>
+    <span class="ticker-item"><span class="dot"></span>Spring Boot</span>
+    <span class="ticker-item"><span class="dot"></span>AWS</span>
+    <span class="ticker-item"><span class="dot"></span>Docker</span>
+    <span class="ticker-item"><span class="dot"></span>Kubernetes</span>
+    <span class="ticker-item"><span class="dot"></span>RAG</span>
+    <span class="ticker-item"><span class="dot"></span>MCP</span>
   </div>
 </div>
 
@@ -805,53 +829,72 @@
     <div class="section-label">About me</div>
     <h2 class="section-title">Engineer.<br/>Athlete.<br/><em>Builder.</em></h2>
     <p class="about-bio">
-      I'm a <strong>4th-year Computer Science student at Western University</strong>, where I'm also the Team Captain of the Women's Varsity Volleyball team — a role that's sharpened my instincts for leadership under pressure as much as any codebase has.
+      I just wrapped up an extended internship at <strong>Autodesk</strong> as an AI Engineering Intern, where I was the founding engineer of Access-Lens, an LLM agent platform that's now in production. In January 2027 I'm joining <strong>Rippling</strong> as a Backend Engineering Intern.
     </p>
     <p class="about-bio">
-      I'm drawn to building solutions to genuinely hard problems, with a particular pull toward the <strong>financial space</strong> — where systems have to be precise, fast, and reliable all at once. Whether that's a real-time arbitrage engine or a high-throughput banking pipeline, that intersection of complexity and consequence is where I do my best work.
-    </p>
-    <p class="about-bio">
-      Currently interning at <strong>Autodesk</strong> in Toronto, building AI-powered infrastructure that replaces legacy systems at scale. Previously at RBC Capital Markets and General Dynamics.
+      Volleyball has been a big part of my time at Western. I've played on the <a href="https://westernmustangs.ca/sports/womens-volleyball/roster/thea-ishida/36005" target="_blank" rel="noopener"><strong>women's varsity team</strong></a> for four years and captained it for the last two. Last season we made the semifinals, something our program hadn't done in four years.
     </p>
   </div>
   <div class="about-right">
-    <div class="stat-grid">
-      <div class="stat-item">
-        <div class="stat-num">3.8</div>
-        <div class="stat-label">GPA · Dean's Honour Roll</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">3×</div>
-        <div class="stat-label">Internships completed</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">2×</div>
-        <div class="stat-label">Hackathon 1st place</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">2yr</div>
-        <div class="stat-label">Varsity team captain</div>
+    <div class="skill-group">
+      <div class="skill-group-label">Languages</div>
+      <div class="skills-grid">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Java</span>
+        <span class="skill-tag">C++</span>
+        <span class="skill-tag">C#</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">TypeScript / JavaScript</span>
       </div>
     </div>
-    <div class="skills-grid">
-      <span class="skill-tag highlight">Python</span>
-      <span class="skill-tag highlight">Java</span>
-      <span class="skill-tag highlight">TypeScript</span>
-      <span class="skill-tag">C#</span>
-      <span class="skill-tag">SQL</span>
-      <span class="skill-tag">MATLAB</span>
-      <span class="skill-tag highlight">Docker</span>
-      <span class="skill-tag highlight">Kubernetes</span>
-      <span class="skill-tag">AWS Lambda</span>
-      <span class="skill-tag">Spring Boot</span>
-      <span class="skill-tag">React</span>
-      <span class="skill-tag">Flask</span>
-      <span class="skill-tag">Kafka</span>
-      <span class="skill-tag">WebSockets</span>
-      <span class="skill-tag">REST APIs</span>
-      <span class="skill-tag">Git / CI/CD</span>
-      <span class="skill-tag">MCP</span>
-      <span class="skill-tag">Azure (AZ-900)</span>
+    <div class="skill-group">
+      <div class="skill-group-label">Systems &amp; backend</div>
+      <div class="skills-grid">
+        <span class="skill-tag">FastAPI</span>
+        <span class="skill-tag">Spring Boot</span>
+        <span class="skill-tag">Linux</span>
+        <span class="skill-tag">REST APIs</span>
+        <span class="skill-tag">Microservices</span>
+        <span class="skill-tag">Kafka</span>
+        <span class="skill-tag">WebSockets</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Infrastructure</div>
+      <div class="skills-grid">
+        <span class="skill-tag">AWS (ECS Fargate, OpenSearch Serverless, CloudWatch)</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Kubernetes</span>
+        <span class="skill-tag">Azure (AKS)</span>
+        <span class="skill-tag">Git</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">AI infrastructure</div>
+      <div class="skills-grid">
+        <span class="skill-tag">RAG</span>
+        <span class="skill-tag">LlamaIndex</span>
+        <span class="skill-tag">MCP</span>
+        <span class="skill-tag">Agentic systems</span>
+        <span class="skill-tag">LLM evaluation</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Data</div>
+      <div class="skills-grid">
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">DynamoDB</span>
+        <span class="skill-tag">Pandas</span>
+        <span class="skill-tag">NumPy</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Observability</div>
+      <div class="skills-grid">
+        <span class="skill-tag">Dynatrace</span>
+        <span class="skill-tag">Splunk</span>
+        <span class="skill-tag">CloudWatch</span>
+      </div>
     </div>
   </div>
 </section>
@@ -864,28 +907,50 @@
 
     <div class="exp-item">
       <div class="exp-meta">
-        <div class="exp-company">Autodesk</div>
-        <div class="exp-period">May 2026 – Present</div>
-        <div class="exp-location">Toronto, ON</div>
-        <div class="exp-team">Cloud Platforms &amp;<br/>Product Access</div>
+        <div class="exp-company">Rippling</div>
+        <div class="exp-period">Jan 2027 – Apr 2027</div>
+        <div class="exp-location">San Francisco, CA</div>
+        <div class="exp-team">HRIS · Distributed Systems</div>
       </div>
       <div class="exp-content">
-        <div class="exp-role">Software Engineer Intern</div>
+        <div class="exp-role">Backend Engineering Intern (Incoming)</div>
+        <ul class="exp-bullets">
+          <li>Joining a distributed systems team in HRIS.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-company">Autodesk</div>
+        <div class="exp-period">May 2026 – Nov 2026</div>
+        <div class="exp-location">Toronto, ON</div>
+        <div class="exp-team">Cloud Licensing &amp;<br/>Product Access</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-role">AI Engineering Intern (Extended)</div>
         <div class="exp-product-desc">
-          <a href="https://www.autodesk.com" target="_blank" rel="noopener" class="exp-product-link">Autodesk ↗</a> is a global design and engineering software company behind tools like AutoCAD, Revit, and Fusion. The Cloud Platforms &amp; Product Access team owns the infrastructure and services that power product access, licensing, and identity across Autodesk's platform. As a software engineering intern, I built an AI-powered Slack agent to replace the team's legacy support bot, and re-architected the RAG pipeline powering it — cutting incident triage from hours to seconds and expanding context capacity by 16×.
+          <a href="https://www.autodesk.com" target="_blank" rel="noopener" class="exp-product-link">Autodesk ↗</a> builds design and engineering software including AutoCAD, Revit, and Fusion. I was the founding engineer of <strong>Access-Lens</strong>, a Slack-native LLM agent platform that diagnoses access and entitlement issues by querying live systems. It replaced a legacy support bot, cut incident triage from hours to under 2 minutes, and is now in production.
         </div>
+        <!-- TODO: add Access-Lens adoption metric if one exists -->
         <ul class="exp-bullets" style="margin-top: 1rem;">
-          <li>Building an AI-powered Slack Agent platform using Python, Bold SDK, AWS Lambda, MCP, Kubernetes, and Docker — designed to replace a legacy support bot and cut incident triage time from hours to seconds.</li>
-          <li>Re-architected the internal agent's RAG pipeline with a company-approved embedding model and a CloudOS-managed vector database, achieving 16× context capacity and 4× dimensionality with zero added infrastructure costs.</li>
+          <li>Built Access-Lens as a stateless Python/FastAPI service in Docker on AWS ECS Fargate, using LlamaIndex and the Anthropic API.</li>
+          <li>Wrote the design doc for and led the RAG pipeline redesign. Took it from POC to production after the original vector DB (Qdrant) failed security review: moved retrieval onto a slice of another team's existing Amazon OpenSearch Serverless collection and replaced a local Hugging Face embedding model with a company-approved one, at zero added infrastructure cost.</li>
+          <li>Evaluated retrieval on a test set of past tickets, then re-ran the evaluation after the migration.</li>
+          <li>Built an MCP server for Access-Lens so engineers across the company can call it from Slack or a terminal and plug in their own investigation skills.</li>
+          <li>Set up observability with CloudWatch, Dynatrace dashboards, and Splunk. Wrote onboarding docs and tracked team adoption.</li>
+          <li>Extended into the fall based on performance: kept building Access-Lens and helped the team with service upgrades.</li>
         </ul>
         <div class="exp-tags">
           <span class="exp-tag">Python</span>
-          <span class="exp-tag">AWS Lambda</span>
-          <span class="exp-tag">MCP</span>
-          <span class="exp-tag">Kubernetes</span>
+          <span class="exp-tag">FastAPI</span>
           <span class="exp-tag">Docker</span>
+          <span class="exp-tag">AWS ECS Fargate</span>
+          <span class="exp-tag">OpenSearch Serverless</span>
+          <span class="exp-tag">LlamaIndex</span>
+          <span class="exp-tag">Anthropic API</span>
+          <span class="exp-tag">MCP</span>
           <span class="exp-tag">RAG</span>
-          <span class="exp-tag">LLMs</span>
         </div>
         <a href="https://www.autodesk.com" target="_blank" rel="noopener" class="project-link" style="margin-top: 1rem;">Visit Autodesk →</a>
       </div>
@@ -893,26 +958,27 @@
 
     <div class="exp-item">
       <div class="exp-meta">
-        <div class="exp-company">General Dynamics</div>
+        <div class="exp-company">General Dynamics Land Systems</div>
         <div class="exp-period">Jan 2026 – May 2026</div>
         <div class="exp-location">London, ON</div>
         <div class="exp-team">Vehicle Software<br/>Applications</div>
       </div>
       <div class="exp-content">
         <div class="exp-role">Software Engineer Intern</div>
-        <div class="exp-product-desc">
-          The <a href="https://www.canada.ca/en/department-national-defence/services/procurement/logistics-vehicle-modernization-project.html" target="_blank" rel="noopener" class="exp-product-link">Logistics Vehicle Modernization (LVM) Project ↗</a> is a Canadian Department of National Defence contract to modernize the military's fleet of logistics vehicles. On the Vehicle Software Applications team, I engineered a bilingual (English/French) internal portal providing operators with full control over CANbus devices and real-time telemetry from complex vehicle systems — bridging a C#/.NET data layer with a modern Vue.js + Quasar frontend and scaling localization to 100% of the user base.
-        </div>
-        <ul class="exp-bullets" style="margin-top: 1rem;">
-          <li>Developed a responsive Vue.js + Quasar (TypeScript) web dashboard connected to a CANbus component database for real-time low-level system monitoring and diagnostics, with full French/English localization.</li>
-          <li>Engineered a custom C#/.NET data streaming client in a Linux environment, eliminating parsing failures and achieving 100% reliability for critical system data loggers.</li>
+        <ul class="exp-bullets">
+          <li>Built backend services and tooling for defence vehicle software, with embedded Linux integration and testing. Automated datalogger diagnostics with shell scripts and cron.</li>
+          <li>Built a bilingual (French/English) Vue.js/TypeScript/Quasar UI for an internal CANbus control portal with a C# backend.</li>
+          <li>Cut PDMT machine setup time by 66% (4 business days to 1) through technical documentation.</li>
+          <li>Built telemetry data-logging software in C++ for vehicle systems on Linux.</li>
         </ul>
         <div class="exp-tags">
+          <span class="exp-tag">C++</span>
+          <span class="exp-tag">Linux</span>
+          <span class="exp-tag">Shell</span>
           <span class="exp-tag">Vue.js</span>
           <span class="exp-tag">TypeScript</span>
           <span class="exp-tag">Quasar</span>
-          <span class="exp-tag">C#/.NET</span>
-          <span class="exp-tag">Linux</span>
+          <span class="exp-tag">C#</span>
           <span class="exp-tag">CANbus</span>
         </div>
         <a href="https://www.canada.ca/en/department-national-defence/services/procurement/logistics-vehicle-modernization-project.html" target="_blank" rel="noopener" class="project-link" style="margin-top: 1rem;">View LVM Project →</a>
@@ -924,23 +990,27 @@
         <div class="exp-company">RBC Capital Markets</div>
         <div class="exp-period">May 2025 – Dec 2025</div>
         <div class="exp-location">Toronto, ON</div>
-        <div class="exp-team">U.S. Cash Management<br/>Payments API Team</div>
+        <div class="exp-team">RBC Clear · US Cash<br/>Management Payments</div>
       </div>
       <div class="exp-content">
         <div class="exp-role">Backend Software Engineering Intern</div>
         <div class="exp-product-desc">
-          <a href="https://www.rbccm.com/en/expertise/rbcclear" target="_blank" rel="noopener" class="exp-product-link">RBC Clear ↗</a> is RBC Capital Markets' institutional clearing and custody platform, enabling high-volume U.S. payment flows and cash management operations for financial institutions. As a backend intern on the Payments API team, I built core pipeline infrastructure that directly underpins the platform's payment processing capabilities — accelerating delivery cycles and improving deployment reliability through workflow automation and containerized microservices.
+          <a href="https://www.rbccm.com/en/expertise/rbcclear" target="_blank" rel="noopener" class="exp-product-link">RBC Clear ↗</a> is RBC Capital Markets' clearing and cash management platform for financial institutions. I worked on backend services for US payment rails (ACH, SWIFT, Fedwire) and FX logic.
         </div>
         <ul class="exp-bullets" style="margin-top: 1rem;">
-          <li>Accelerated software delivery and deployment cycles by 60% by engineering a high-throughput Java and Spring Boot backend pipeline, leveraging Camunda to automate core workflows.</li>
-          <li>Containerized microservices with Docker and orchestrated via Kubernetes, improving environment consistency and reducing deployment lead times across the team.</li>
+          <li>Refactored database validation connections to remove redundant queries, resolving a latency bottleneck: 30% payment engine efficiency gain.</li>
+          <li>Built a Java/Spring Boot pipeline with Camunda to automate a US cash management payment rail workflow. Camunda made the payment flow visible to non-technical stakeholders. 60% faster delivery cycles.</li>
+          <li>Built and maintained 8+ internal APIs and wrote 4+ Swagger API specs. Input validation cut integration failures by 40%.</li>
+          <li>Containerized microservices with Docker, orchestrated on Kubernetes.</li>
         </ul>
         <div class="exp-tags">
           <span class="exp-tag">Java</span>
           <span class="exp-tag">Spring Boot</span>
+          <span class="exp-tag">Camunda</span>
+          <span class="exp-tag">Swagger</span>
           <span class="exp-tag">Docker</span>
           <span class="exp-tag">Kubernetes</span>
-          <span class="exp-tag">Camunda</span>
+          <span class="exp-tag">ACH / SWIFT / Fedwire</span>
         </div>
         <a href="https://www.rbccm.com/en/expertise/rbcclear" target="_blank" rel="noopener" class="project-link" style="margin-top: 1rem;">View RBC Clear →</a>
       </div>
@@ -958,33 +1028,62 @@
   <div class="projects-grid" style="margin-bottom: 1px;">
 
     <div class="project-card featured">
-      <div class="project-num">01 · Featured</div>
+      <div class="project-num">01 · Featured · May 2026 – Present</div>
       <div class="project-badge">🟢 In Progress</div>
       <h3 class="project-title">Real-Time Arbitrage Engine</h3>
-      <p class="project-desc">A high-performance cross-exchange arbitrage calculator that identifies price discrepancies in real time. Uses asynchronous WebSockets to process market signals with minimal latency, and vectorized NumPy calculations to evaluate triangular arbitrage opportunities across multiple currency pairs simultaneously.</p>
+      <p class="project-desc">Streams live Binance and Kraken WebSocket feeds at 0.46ms mean tick-to-signal latency. Measured average spreads of 0.17bps, confirming market efficiency rather than reporting false-positive opportunities.</p>
       <div class="project-stack">
-        <span>Python</span><span>NumPy</span><span>Pandas</span><span>WebSockets</span><span>Async I/O</span>
+        <span>Python</span><span>NumPy</span><span>Pandas</span><span>WebSockets</span>
       </div>
+      <a href="https://github.com/thea-ishida/arbitrage_tool" target="_blank" rel="noopener" class="project-link">View repo →</a>
     </div>
 
     <div class="project-card">
       <div class="project-num">02</div>
-      <div class="project-award">🏆 1st Place · Toronto Tech Expo</div>
-      <h3 class="project-title">SnowFall — IoT Health System</h3>
-      <p class="project-desc">Led a 5-engineer team to build a wearable IoT health system. Synchronized sensors with a Python backend for 100% real-time data fidelity. Built a caretaker-facing chatbot using a 1.3B DeepSeek LLM, improving interaction efficiency by 35%. Won "Best Use of AI for Good."</p>
+      <div class="project-badge">🟢 In Progress</div>
+      <h3 class="project-title">Multi-Instrument Order Book &amp; Matching Engine</h3>
+      <p class="project-desc">An order book and matching engine in C++, pitched as a trading simulator with a market maker. CS 3307 course project; 95% on the first deliverable.</p>
       <div class="project-stack">
-        <span>Python</span><span>IoT</span><span>DeepSeek LLM</span><span>Wearables</span>
+        <span>C++</span>
       </div>
+      <!-- TODO: link repo if public -->
     </div>
 
-    <div class="project-card" style="border-top: 1px solid var(--border);">
-      <div class="project-num">03</div>
-      <div class="project-award">🏆 1st Place · Western Dev Society</div>
-      <h3 class="project-title">SmartCart — Accessible Retail Platform</h3>
-      <p class="project-desc">Led a cross-functional team to build an AI-driven accessible retail platform. Delivered a feature-complete full-stack MVP in a 48-hour sprint, winning first place at the Western Dev Society Hackathon.</p>
+    <div class="project-card wide" style="border-top: 1px solid var(--border);">
+      <div class="project-num">03 · Live · Nov 2026 – Present</div>
+      <div class="project-award">Mustang Capital Quantitative Team</div>
+      <h3 class="project-title">True Markets Orderbook Arena</h3>
+      <p class="project-desc">Competing in the True Markets Orderbook Arena on behalf of the Mustang Capital Quantitative Team, where I've been a Quantitative Developer since October 2026. I build the team's trading strategies, backtesting tools, and execution infrastructure.</p>
       <div class="project-stack">
-        <span>React</span><span>Flask</span><span>Python</span><span>AI/ML</span>
+        <span>Trading Strategies</span><span>Backtesting</span><span>Execution</span>
       </div>
+      <!-- TODO: add languages/stack for the arena work -->
+    </div>
+
+  </div>
+
+  <div class="projects-grid two-col" style="border-top: none;">
+
+    <div class="project-card">
+      <div class="project-num">04</div>
+      <div class="project-award">🏆 1st Place · Western Dev Society</div>
+      <h3 class="project-title">SmartCart: Accessible Checkout</h3>
+      <p class="project-desc">Project lead. Given a baseline TypeScript codebase and a vague brief to make checkout accessible with AI. Broke the problem into parallel workstreams across the developers. The team won.</p>
+      <div class="project-stack">
+        <span>TypeScript</span><span>AI</span>
+      </div>
+      <a href="https://github.com/thea-ishida/SmartCart" target="_blank" rel="noopener" class="project-link">View repo →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num">05</div>
+      <div class="project-award">🏆 1st Place · Tech for Good, Toronto Tech Expo</div>
+      <h3 class="project-title">SnowFall: IoT Fall Detection</h3>
+      <p class="project-desc">Software lead on an IoT fall-detection wearable with real-time acceleration monitoring. Built the caregiver chatbot on a local DeepSeek model served with Ollama, refined through prompt engineering. Coordinated the UI and hardware data pipeline.</p>
+      <div class="project-stack">
+        <span>IoT</span><span>DeepSeek</span><span>Ollama</span><span>Wearables</span>
+      </div>
+      <a href="https://github.com/thea-ishida/SnowFall" target="_blank" rel="noopener" class="project-link">View repo →</a>
     </div>
 
   </div>
@@ -1007,11 +1106,57 @@
   </div>
 </section>
 
+<!-- LEADERSHIP -->
+<section id="leadership">
+  <div class="section-label">Leadership &amp; honours</div>
+  <h2 class="section-title">Beyond<br/><em>the code.</em></h2>
+  <div class="exp-list">
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-company">Athletics</div>
+        <div class="exp-team">Western Women's<br/>Varsity Volleyball</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-role">Two-Year Captain</div>
+        <ul class="exp-bullets">
+          <li>Four-time varsity athlete. The 2025-26 team reached the semifinals for the first time in 4 years.</li>
+          <li>Proposed a rotating coach-feedback system after teammates asked for more feedback.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-company">Clubs</div>
+        <div class="exp-team">Western University</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-role">Quantitative Developer, Mustang Capital Quantitative Team</div>
+        <ul class="exp-bullets">
+          <li>Building trading strategies, backtesting tools, and execution infrastructure (since October 2026).</li>
+          <li>Member of Western Algorithmic Trading Club, Western AI, and Women in Tech.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-company">Honours</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-role">Academic All-Canadian · Dean's Honour List</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-eyebrow">Let's connect</div>
   <h2 class="contact-heading">Have something<br/><em>worth building?</em></h2>
-  <p class="contact-subtext">I'm always open to interesting conversations — especially at the intersection of software and finance. Don't hesitate to reach out.</p>
+  <p class="contact-subtext">I'm looking for Summer 2027 internships in trading infrastructure, quant development, and backend systems. Reach out.</p>
   <a href="mailto:thea.ishida@gmail.com" class="contact-email">thea.ishida@gmail.com →</a>
   <div style="display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap;">
     <a href="https://linkedin.com/in/thea-ishida" target="_blank" class="btn-secondary">LinkedIn ↗</a>
@@ -1131,7 +1276,7 @@
     } catch (err) {
       container.innerHTML = `<div style="grid-column:span 3;padding:3rem;text-align:center;background:var(--surface);">
         <div style="font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.1em;color:var(--text-dim);text-transform:uppercase;">
-          Couldn't load repositories right now —
+          Couldn't load repositories right now.
           <a href="https://github.com/thea-ishida" target="_blank" style="color:var(--accent);text-decoration:none;">view them on GitHub ↗</a>
         </div>
       </div>`;
